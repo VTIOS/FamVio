@@ -3,10 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    --ai skid thì nhớ đổi tên =)
-    --táo hub , aniee hub :>
-    Title = "NINO Hub",
-    SubTitle = "Version 2",
+    Title = "Văn Thành IOS ",
+    SubTitle = "Version 1",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -6221,28 +6219,28 @@ Options.ToggleFindMoon:SetValue(false)
 spawn(function()
     while wait() do
         if _G.AutoFindMoon then
-        if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
+        if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=103439991632690" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=103439991632690" then
             wait(2.0)
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
+        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=103439991632690" then
             Hop()
             Fluent:Notify({
-                Title = "NINO Hub",
+                Title = "Alex Hub",
                 Content = "Turn Off Find Full Moon...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
             })
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
+        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=103439991632690" then
             Hop()
             Fluent:Notify({
-                Title = "NINO Hub",
+                Title = "Alex Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
             })
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
+        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=103439991632690" then
             Hop()
             Fluent:Notify({
-                Title = "NINO Hub",
+                Title = "Alex Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
