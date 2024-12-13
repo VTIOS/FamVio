@@ -1,46 +1,30 @@
-    ['__script'] = function(m) return "https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Alchemy/__"..m..".lua" end;
-    ['__load'] = function(s) loadstring(game:HttpGet(s))() end;
-    ['__ismobile'] = function()
-        local uis = game:GetService("UserInputService")
-        if uis.TouchEnabled and not uis.KeyboardEnabled and not uis.MouseEnabled then return true
-        elseif not uis.TouchEnabled and uis.KeyboardEnabled and uis.MouseEnabled then return false end
-    end;
-    ['__executor'] = tostring(identifyexecutor())
-}
-local isDelta = function()
-    local exec = string.lower(__f['__executor'])
-    if exec == "delta" or string.find(exec, "delta") then
-        return true
-    else
-        return false
-    end
-end
-if _G.run_time then game:GetService("Players").LocalPlayer:Kick("[ Error : 429 ] Too Many Execute") end
-if _G.StreamerMode then
-    pcall(function()
-        local a_protect = game:GetDescendants()
-        local n_protect =  game:GetService("Players").LocalPlayer.DisplayName
-        local f_protect =  game:GetService("Players").LocalPlayer.Name
-        for i=1,#a_protect do
-            if a_protect[i].ClassName == "TextLabel" then
-                if a_protect[i].Text == n_protect then
-                    a_protect[i].Text = "By: @vanthanhisme_"
-                elseif a_protect[i].Text == "@"..f_protect then
-                    a_protect[i].Text = "@vanthanhisme_"
-                end
-            end
-        end
-    end)
-end;_G.Alchemy = premium or getgenv().premium
-spawn(function()
-    pcall(function()
-        game:GetService("Players").LocalPlayer.Idled:connect(function()
-            game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-            wait(1)
-            game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-        end)
-    end)
+highChestOnly = true
+godsChalicSniper = false
+repeat task.wait(4) until game:IsLoaded()
+local PlaceID = game.PlaceId
+local AllIDs = {}
+local foundAnything = ""
+local actualHour = os.date("!*t").hour
+local Deleted = false
+local File = pcall(function()
+    AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
 end)
+if not File then
+    table.insert(AllIDs, actualHour)
+    writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+end
+
+function TPReturner()
+    local Site
+    if foundAnything == "" then
+        Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+    else
+        Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+    end
+    local ID = ""
+    if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+        foundAnything = Site.nextPageCursor
+    end
 local UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI1.lua"))()
 local Notification = UILibrary:Notification();
 Notification.new({
