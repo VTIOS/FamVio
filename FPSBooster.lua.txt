@@ -212,12 +212,12 @@ coroutine.wrap(pcall)(function()
             sethiddenproperty(workspace:FindFirstChildOfClass("Terrain"), "Decoration", false)
         else
             StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/rips",
-                Text = "Your exploit does not support sethiddenproperty, please use a different exploit.",
+                Title = "Văn Thành IOS",
+                Text = "...",
                 Duration = 5,
-                Button1 = "Okay"
+                Button1 = "Đã Xong"
             })
-            warn("Your exploit does not support sethiddenproperty, please use a different exploit.")
+            warn("Văn Thành IOS")
         end
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
@@ -228,7 +228,7 @@ coroutine.wrap(pcall)(function()
             })
         end
         if _G.ConsoleLogs then
-            warn("Low Water Graphics Enabled")
+            warn("Văn Thành IOS")
         end
     end
 end)
@@ -241,30 +241,13 @@ coroutine.wrap(pcall)(function()
             sethiddenproperty(Lighting, "Technology", 2)
         else
             StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/rips",
-                Text = "Your exploit does not support sethiddenproperty, please use a different exploit.",
-                Duration = 5,
-                Button1 = "Okay"
-            })
-            warn("Your exploit does not support sethiddenproperty, please use a different exploit.")
-        end
-        if _G.SendNotifications then
-            StarterGui:SetCore("SendNotification", {
-                Title = "Loading 30%",
+                Title = "Văn Thành IOS",
                 Text = "...",
                 Duration = 5,
                 Button1 = "Đã Xong"
             })
+            warn("Văn Thành IOS")
         end
-        if _G.ConsoleLogs then
-            warn("No Shadows Enabled")
-        end
-    end
-end)
-coroutine.wrap(pcall)(function()
-    if _G.Settings["Low Rendering"] or (_G.Settings.Other and _G.Settings.Other["Low Rendering"]) then
-        settings().Rendering.QualityLevel = 1
-        settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
                 Title = "Loading 40%",
@@ -274,7 +257,24 @@ coroutine.wrap(pcall)(function()
             })
         end
         if _G.ConsoleLogs then
-            warn("Low Rendering Enabled")
+            warn("Văn Thành IOS")
+        end
+    end
+end)
+coroutine.wrap(pcall)(function()
+    if _G.Settings["Low Rendering"] or (_G.Settings.Other and _G.Settings.Other["Low Rendering"]) then
+        settings().Rendering.QualityLevel = 1
+        settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
+        if _G.SendNotifications then
+            StarterGui:SetCore("SendNotification", {
+                Title = "Loading 50%",
+                Text = "...",
+                Duration = 5,
+                Button1 = "Đã Xong"
+            })
+        end
+        if _G.ConsoleLogs then
+            warn("Văn Thành IOS")
         end
     end
 end)
@@ -286,14 +286,14 @@ coroutine.wrap(pcall)(function()
         MaterialService.Use2022Materials = false
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
-                Title = "Loading 50%",
+                Title = "Loading 60%",
                 Text = "...",
                 Duration = 5,
                 Button1 = "Đã Xong"
             })
         end
         if _G.ConsoleLogs then
-            warn("Reset Materials Enabled")
+            warn("Văn Thành IOS")
         end
     end
 end)
@@ -304,37 +304,37 @@ coroutine.wrap(pcall)(function()
                 setfpscap(tonumber(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])))
                 if _G.SendNotifications then
                     StarterGui:SetCore("SendNotification", {
-                        Title = "Loading 60%",
+                        Title = "Loading 80%",
                         Text = "...",
                         Duration = 5,
                         Button1 = "Đã Xong"
                     })
                 end
                 if _G.ConsoleLogs then
-                    warn("FPS Capped to " .. tostring(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])))
+                    warn("Văn Thành IOS")
                 end
             elseif _G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"]) == true then
                 setfpscap(1e6)
                 if _G.SendNotifications then
                     StarterGui:SetCore("SendNotification", {
-                        Title = "discord.gg/rips",
-                        Text = "FPS Uncapped",
+                        Title = "Văn Thành IOS",
+                        Text = "...",
                         Duration = 5,
-                        Button1 = "Okay"
+                        Button1 = "Đã Xong"
                     })
                 end
                 if _G.ConsoleLogs then
-                    warn("FPS Uncapped")
+                    warn("Văn Thành IOS")
                 end
             end
         else
             StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/rips",
-                Text = "FPS Cap Failed",
+                Title = "Văn Thành IOS",
+                Text = "...",
                 Duration = math.huge,
-                Button1 = "Okay"
+                Button1 = "Đã Xong"
             })
-            warn("FPS Cap Failed")
+            warn("Văn Thành IOS")
         end
     end
 end)
@@ -354,7 +354,7 @@ if _G.SendNotifications then
     })
 end
 if _G.ConsoleLogs then
-    warn("Checking " .. #Descendants .. " Instances...")
+    warn("Văn Thành IOS")
 end
 for i, v in pairs(Descendants) do
     CheckIfBad(v)
@@ -372,7 +372,7 @@ StarterGui:SetCore("SendNotification", {
     Duration = math.huge,
     Button1 = "Đã Xong"
 })
-warn("FPS Booster Loaded!")
+warn("Văn Thành IOS")
 --game.DescendantAdded:Connect(CheckIfBad)
 --[[game.DescendantAdded:Connect(function(value)
     CheckIfBad(value)
